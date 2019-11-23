@@ -4,17 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 // Http
 import { HttpClientModule } from "@angular/common/http";
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomseguroPipe } from "./pipes/domseguro.pipe";
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
+
+// Compoenenets Shareds
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardsComponent } from './components/shared/cards/cards.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 // Services
 // import { SpotifyService } from './services/spotify.service';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NavbarComponent,
     NoimagePipe,
     CardsComponent,
-    LoadingComponent
+    LoadingComponent,
+    DomseguroPipe
   ],
   imports: [
     HttpClientModule,
